@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso HTML5, CSS3 e JavaScript</title>
+        <style type="text/css">
+            div {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: linear-gradient( rgba(0, 0, 0, 0.4)  70%, rgba(0, 0, 0, 0.2));
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            h1, 
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 0;
+                font-weight: 300;
+                font-family: 'Roboto', sans-serif;
+                color: #fff;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            /* Daqui para cima é tudo mobile */
+            body {
+                background: url("assets/images/background-mobile.webp") no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+           /*Mediaquerie*/ 
+            /* tablet */
+            @media (min-width: 768px) {
+                
+                body {
+                background: url("assets/images/background-mobile.webp") no-repeat;
+                background-size: cover;
+                background-position: center center;
+                }
+            }
+
+            /* Desktop */
+            @media (min-width: 1280px){
+
+                body {
+                background: url("assets/images/background-mobile.webp") no-repeat;
+                background-size: cover;
+                background-position: center center;
+                }
+            }
+
+            /* Extra LArge -iMac 27"*/
+            @media (min-width: 1680px) {
+
+            }
+
+
+        </style>
+    </head>
+    
+    <body >
+        <div>
+            <h1>
+                Seja Bem Vindo(a) ao Curso de HTML5, CSS3 e JavaScript
+            </h1>
+
+            <h2> Estamos estudando no momento: <i>HTML5</i></h2>
+        </div>    
+    </body>
+
+</html>
