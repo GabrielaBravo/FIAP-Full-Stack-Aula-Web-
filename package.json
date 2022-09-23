@@ -1,0 +1,21 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "sass --watch ./assets/scss:./assets/css --style compressed --no-source-map",
+    "git": "git add --all && git commit -m'Deploy' && git push origin master && echo 'deploy realido'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielaBravo/FIAP-Full-Stack-Aula-Web-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielaBravo/FIAP-Full-Stack-Aula-Web-/issues"
+  },
+  "homepage": "https://github.com/GabrielaBravo/FIAP-Full-Stack-Aula-Web-#readme"
+}
