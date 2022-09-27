@@ -40,24 +40,44 @@
     <footer></footer>
 
     <script>
-        const button = document.querySelector(".top-button");
         const header = document.querySelector(".top-site");
-        header.style.background = 'none';
-        button.classList.add('disabled');
-
-        window.addEventListener('scroll', (e) => {
-            console.log(window.scrollY);
-
-
+        const button = document.querySelector(".top-button");
+        const body = document.querySelector("body");
+        button.style.width = "150px";
+        button.classList.add("disabled");
+        window.addEventListener('scroll', (e) => { 
+            console.log(body.clientHeight);
+            
             if (window.scrollY < 100) {
                 header.style.background = 'none';
                 button.classList.add('disabled');
             } else {
-                header.style.background = '#fff';
-                button.classList.remove('disabled');
+                // const aArray = header.querySelectorAll("a");
+                const logo = header.querySelector(".jss12");
+
+                if (window.scrollY >= (body.clientHeight - 800)) {
+                    header.style.background = '#000';
+                    logo.style.fill = "#fff";
+                    header.classList.add("footer-link-a")
+                    // aArray.forEach(item => item.style.color = "#fff");
+                } else {
+                    header.style.background = '#fff';
+                    button.classList.remove('disabled');
+                    logo.style.fill = "#000";
+                    header.classList.remove("footer-link-a")
+                    // aArray.forEach(item => item.style.color = "#222")
+                }
+                
             }
         });
 
+        //janela e site: 
+        //document: site; window:janela
+        //javascript é uma linguagem dirigida a eventos
+        //JavaScript: camelCase: começa com letra minuscula, e a cada nova palavra, usa letra maiúscula
+        //CSS: kebab-case: tudo minusculo separado com '-'
+        //callback: uma função, que é passada como parametro,em outra função.
+        //o tipo de função mais simples no JS são as funções de setas(arrow function) '=>' ; (parametros)=>{  }
     </script>
 
 </body>
