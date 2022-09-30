@@ -35,7 +35,9 @@
         <form action="cadastro2.php" method="post" class="form-login">
             <label for="login">
                 CPF*
-                <input type="text" name="login" placeholder = "Digite o CPF" id="login" pattern = "/^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/" required oninvalid="this.setCustomValidity('Preencha o campo CPF')" oninput="this.setCustomValidity('')"/>
+                <input type="text" name="login" placeholder = "Digite o CPF" id="login" required 
+                oninvalid="this.setCustomValidity('Preencha o campo CPF')" 
+                oninput="this.setCustomValidity('')"/>
             </label>
 
             <label for="password">
