@@ -14,3 +14,8 @@ const user = {
 const { password, ...data} = user;
 
 console.log("OMG!", data);
+
+//atribuição por desestruturação de arrays:
+const [latam, gol, azul] = aereasNacional;
+
+console.log(azul);
