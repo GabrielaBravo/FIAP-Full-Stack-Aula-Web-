@@ -20,7 +20,7 @@ carrosArray.forEach((value, key) => {
   carros.innerHTML += `<option value="${key}">${value}</option>`;
 });
 
-carrosArray.forEach((value) => console.log(value));
+// carrosArray.forEach((value) => console.log(value));
 
 const importados = [
   ["BMW", "320i", "M3", "M4", "X5", "X6", "z4 m40i"],
@@ -79,3 +79,78 @@ menu.forEach((value, index) => {
 });
 
 document.querySelector("nav").appendChild(ulMenu);
+
+
+const newCarros = ["Corsa", "Uno", "Gol", "Palio", "Kombi", "208"];
+
+//adicionar um elemento NO FINAL do array. Push
+newCarros.push("Celta", "Monza");
+
+//adicionar um elemento NO INÍCIO do array. Unshift
+newCarros.unshift("Fusca");
+
+//remover um elemento do FINAL do array. Pop
+const ultimo = newCarros.pop(); //retorna o elemento removido
+
+const primeiro = newCarros.shift(); //retorna o elemento removido
+
+const nomeCompleto = "Glaucio Daniel Souza Santos";
+const nomeArray = nomeCompleto.split(" ");
+const americanName = [nomeArray.at(-1), nomeArray[0]].join(", ");
+// GLAUCIO D S SANTOS
+// SANTOS, GLAUCIO
+const removeUm = newCarros.splice(0, 3);
+
+// console.log(removeUm, "Remove um, splice");
+// console.log(americanName, "Formato americano");
+// console.log(newCarros, "NewCarros");
+// console.log("-------------------------------")
+// const frutas = ["Banana", "Maça", "pera", "Uva", "melancia"];
+// const primeiras = frutas.slice(3);
+// console.log(primeiras);
+//push-add no final do array,
+//pop - remove um item no final do array
+//shift -  remove apenas 1
+//unshift - add um item no inicio 
+//split - quebra um texto em varios arrays.
+//join - junta varios arrays num texto. O método join() junta todos os elementos de um array em uma string e retorna esta string.
+//splice -especifiva o "local" e "quantidade" a ser removida(dois parametros). segue a logica
+//Programação funcional.- imutabilidade, os ddos não mudam. O array original não é alterado.
+//slice - gera um novo array, segundo parametro é o fim(pegadinha***). não inclui o ultimo.
+//map - retorna um  novo array com os itens filtrados.vantagem:do inicio ao fim (passa por todas as posições do array).
+//filter - não retona todos os elementos, apenas os "true"
+//find - retorna a primeira ocorrência que for "true"
+
+//const ages = []
+// três Funções
+// map - classifique. 19 - adulto. - mapAge
+// filter - retorne somente os adultos. - filterAge
+// find - encontre o primeiro idoso. - findAge
+
+const ages = [
+  12, 4, 50, 26, 32, 1, 5, 7, 9, 65, 11, 84, 14, 98, 16, 17, 18, 19,
+];
+
+const agesFilter = ages.filter((age) => age >= 18 && age <= 60);
+
+console.log(agesFilter, "adulto");
+
+const agesMap = ages.map((age) => {
+  if (age >= 0 && age <= 2) {
+    return "bebê";
+  } else if (age >= 3 && age <= 11) {
+    return "criança";
+  } else if (age >= 12 && age <= 17) {
+    return "adolescente";
+  } else if (age >= 18 && age <= 60) {
+    return "adulto";
+  } else {
+    return "idoso";
+  }
+});
+console.log(agesMap, "agesMap");
+
+const agesFind = ages.find((age) => age > 60);
+
+console.log(agesFind, "idoso");
+
